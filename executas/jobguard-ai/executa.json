@@ -1,0 +1,9 @@
+{
+  "slug": "jobguard-ai",
+  "name": "JobGuard AI",
+  "version": "0.1.0",
+  "executa_type": "tool",
+  "description": "AI-powered job scam detection tool that analyzes recruitment messages for suspicious signals and provides safety recommendations.",
+  "tool_id": "tool-dev-jobguard-ai",
+  "type": "python"
+}

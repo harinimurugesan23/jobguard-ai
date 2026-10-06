@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tool-dev-jobguard-ai"
+version = "0.1.0"
+description = "Executa plugin: jobguard-ai"
+requires-python = ">=3.10"
+
+[project.scripts]
+"tool-dev-jobguard-ai" = "jobguard_ai_plugin:main"
+
+[tool.setuptools]
+py-modules = ["jobguard_ai_plugin"]

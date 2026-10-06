@@ -1,0 +1,45 @@
+{
+  "schema": 2,
+  "tags": ["jobguard-ai"],
+  "host_capabilities": ["llm.complete"],
+  "required_executas": [
+    {
+      "tool_id": "bundled:jobguard",
+      "version": "latest"
+    }
+  ],
+  "ui": {
+    "bundle": {
+      "format": "static-spa",
+      "entry": "index.html",
+      "external_origins": []
+    },
+    "views": [
+      {
+        "name": "main",
+        "title": "JobGuard AI",
+        "default": true,
+        "default_size": {
+          "w": 760,
+          "h": 820
+        },
+        "min_size": {
+          "w": 360,
+          "h": 480
+        }
+      }
+    ],
+    "host_api": {
+  "llm": ["complete"],
+  "tools": [
+    "required:bundled:jobguard"
+  ],
+  "window": ["set_title"]
+},
+    "csp_overrides": {},
+    "state_merge": "last_writer_wins"
+  },
+  "dev": {
+    "user_id": 1
+  }
+}

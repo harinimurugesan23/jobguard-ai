@@ -1,0 +1,1 @@
+{"ns":"llm","method":"complete","result":{"role":"assistant","content":{"type":"text","text":"This is not JSON and cannot be used as a structured risk assessment."},"model":"mock-model","stopReason":"endTurn"}}

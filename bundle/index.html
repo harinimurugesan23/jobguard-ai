@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f4f7fb" />
+    <title>JobGuard AI</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./app.js" type="module"></script>
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="#top" aria-label="JobGuard AI home">
+          <span class="brand-mark" aria-hidden="true">🛡️</span>
+          <span>JobGuard <span class="brand-light">AI</span></span>
+        </a>
+        <span class="privacy-note"><span class="privacy-dot" aria-hidden="true"></span>Private by design</span>
+      </header>
+
+      <section class="intro" id="top" aria-labelledby="page-title">
+        <p class="eyebrow">A smarter second look</p>
+        <h1 id="page-title">Know the signs.<br /><span>Protect your next move.</span></h1>
+        <p class="intro-copy">Check job offers for potential scam signals before you trust them. Get a clear, practical risk assessment in seconds.</p>
+      </section>
+
+      <section class="analyzer-card" aria-labelledby="analyzer-title">
+        <div class="card-heading">
+          <div>
+            <p class="step-label">YOUR MESSAGE</p>
+            <h2 id="analyzer-title">What would you like to check?</h2>
+          </div>
+          <span class="input-icon" aria-hidden="true">✦</span>
+        </div>
+        <label class="visually-hidden" for="message-input">Job offer or recruiter message</label>
+        <textarea id="message-input" rows="8" maxlength="12000" placeholder="Paste a job offer, recruiter message, WhatsApp message, email, or job description here..."></textarea>
+        <div class="input-meta">
+          <span id="input-hint">Include as much context as you can. Avoid adding sensitive personal details.</span>
+          <span id="character-count" aria-live="polite">0 / 12,000</span>
+        </div>
+        <div id="form-error" class="form-error" role="alert" hidden></div>
+        <button id="analyze-button" class="primary-button" type="button">
+          <span class="button-icon" aria-hidden="true">⌕</span>
+          <span>Analyze for Risk</span>
+        </button>
+        <p class="privacy-footnote"><span aria-hidden="true">🔒</span> Your message is analyzed by Anna AI and is not saved by JobGuard.</p>
+      </section>
+
+      <section id="result-card" class="result-card" aria-labelledby="result-title" hidden>
+        <div class="result-header">
+          <div>
+            <p class="step-label">YOUR ASSESSMENT</p>
+            <h2 id="result-title">Potential risk indicators detected</h2>
+          </div>
+          <span id="risk-badge" class="risk-badge"></span>
+        </div>
+        <p id="result-summary" class="result-summary"></p>
+        <div class="score-panel">
+          <div class="score-copy"><span class="score-label">Risk score</span><strong><span id="risk-score">0</span><span class="score-out-of"> / 100</span></strong></div>
+          <div class="score-track" role="progressbar" aria-label="Risk score" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="score-fill"></span></div>
+          <div class="score-scale"><span>Lower risk</span><span>Higher risk</span></div>
+        </div>
+        <div class="result-sections">
+          <section class="detail-section flags-section" aria-labelledby="red-flags-title">
+            <h3 id="red-flags-title"><span aria-hidden="true">🚨</span> Red Flags</h3>
+            <ul id="red-flags-list"></ul>
+          </section>
+          <section class="detail-section positive-section" aria-labelledby="positive-title">
+            <h3 id="positive-title"><span aria-hidden="true">✅</span> Positive Signals</h3>
+            <ul id="positive-list"></ul>
+          </section>
+          <section class="detail-section action-section" aria-labelledby="actions-title">
+            <h3 id="actions-title"><span aria-hidden="true">🛡️</span> Recommended Actions</h3>
+            <ul id="actions-list"></ul>
+          </section>
+          <section class="detail-section verify-section" aria-labelledby="verify-title">
+            <h3 id="verify-title"><span aria-hidden="true">🔎</span> What to Verify</h3>
+            <ul id="verify-list"></ul>
+          </section>
+        </div>
+        <div class="safety-note"><span aria-hidden="true">ⓘ</span><p>This is an AI risk assessment, not proof of fraud. Verify independently. Never share passwords, OTPs, banking credentials, or card details.</p></div>
+        <button id="reset-button" class="secondary-button" type="button">Analyze Another Message <span aria-hidden="true">↗</span></button>
+      </section>
+
+      <footer class="page-footer"><span>Stay curious. Verify independently.</span><span>Powered by Anna's built-in AI</span></footer>
+      <div id="connection-status" class="visually-hidden" role="status" aria-live="polite"></div>
+    </main>
+  </body>
+</html>

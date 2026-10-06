@@ -1,0 +1,12 @@
+{
+  "name": "JobGuard AI",
+  "slug": "jobguard-ai",
+  "tagline": "AI-powered job scam detection for safer job searching",
+  "description": "JobGuard AI is an AI-powered job safety assistant designed to help job seekers identify potential recruitment scams, fraudulent job offers, suspicious recruiter messages, and other warning signs commonly associated with employment-related fraud. Users can paste a job offer, recruiter message, email, WhatsApp message, or other employment-related communication into JobGuard AI and receive a structured risk assessment in simple language. The application analyzes the provided content for potential warning signs such as requests for upfront registration or processing fees, requests for banking or sensitive personal information, unrealistic salary promises, guaranteed employment claims, suspicious links or communication channels, urgent or threatening language, missing or weak interview processes, unusual payment requests, suspicious software or equipment requirements, unclear company information, and other potentially risky recruitment patterns. JobGuard AI separates potential red flags from positive signals and missing information, provides a risk level and risk score, explains the reasoning behind the assessment, and gives practical safety recommendations. It can also suggest important details that users should independently verify before proceeding with a recruiter, company, job posting, interview, or employment offer. The application is designed to improve scam awareness and help users make more informed decisions before sharing sensitive information, clicking suspicious links, making payments, or continuing with an uncertain job opportunity. JobGuard AI does not claim that a person, recruiter, company, or job opportunity is fraudulent based only on an automated assessment. Its analysis is based only on the information provided by the user and should be treated as a safety-awareness aid rather than definitive proof of fraud. Users should independently verify companies, recruiters, job postings, official communication channels, websites, and employment offers before taking action. JobGuard AI is especially useful for students, fresh graduates, first-time job seekers, remote-job applicants, and anyone who frequently receives recruitment messages through email, messaging applications, or online platforms.",
+  "category": "productivity",
+  "bundled_executas": {
+    "jobguard": {
+      "path": "./executas/jobguard-ai"
+    }
+  }
+}
