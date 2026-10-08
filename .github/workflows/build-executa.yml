@@ -56,7 +56,7 @@ jobs:
           mkdir -p package
           cp dist/jobguard-ai package/jobguard-ai
           tar -czf "jobguard-ai-0.1.2-${{ matrix.platform }}.tar.gz" -C package jobguard-ai
-          sha256sum "jobguard-ai-0.1.2-${{ matrix.platform }}.tar.gz" > "jobguard-ai-0.1.2-${{ matrix.platform }}.tar.gz.sha256"
+          python -c "import hashlib; p='jobguard-ai-0.1.2-${{ matrix.platform }}.tar.gz'; print(hashlib.sha256(open(p,'rb').read()).hexdigest()+'  '+p)" > "jobguard-ai-0.1.2-${{ matrix.platform }}.tar.gz.sha256"
 
       - name: Package Windows
         if: runner.os == 'Windows'
