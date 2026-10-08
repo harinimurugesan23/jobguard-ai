@@ -3,6 +3,9 @@ name: Build JobGuard AI Executa
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build:
     strategy:
@@ -12,14 +15,17 @@ jobs:
             platform: darwin-x86_64
             archive: tar.gz
             executable: jobguard-ai
+
           - os: macos-14
             platform: darwin-arm64
             archive: tar.gz
             executable: jobguard-ai
+
           - os: ubuntu-22.04
             platform: linux-x86_64
             archive: tar.gz
             executable: jobguard-ai
+
           - os: windows-2022
             platform: windows-x86_64
             archive: zip
@@ -74,7 +80,7 @@ jobs:
           name: jobguard-ai-${{ matrix.platform }}
           path: |
             executas/jobguard-ai/jobguard-ai-0.1.2-${{ matrix.platform }}.*
-            
+
   release:
     needs: build
     runs-on: ubuntu-latest
@@ -91,5 +97,5 @@ jobs:
         with:
           tag_name: v0.1.2
           name: JobGuard AI v0.1.2
-          generate_release_notes: true
+          generate_release_notes: false
           files: release-assets/*
